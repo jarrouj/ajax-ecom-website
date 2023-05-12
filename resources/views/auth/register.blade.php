@@ -18,19 +18,29 @@
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
-
-            <div class="mt-4">
+            <div class="mt-4 flex items-center">
+                <img src="assets\img\lebanon-flag.jpg" alt="Lebanon Flag" class="mr-2" width="30">
                 <x-label for="phone" value="{{ __('phone') }}" />
-                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autocomplete="username" />
-            </div>
+                <x-input id="phone" class="block mt-1 ml-2 w-full" type="text" name="phone" :value="old('phone')" required autocomplete="username" />
+              </div>
+
             {{-- <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="text" name="email" :value="old('email')" required autocomplete="username" />
             </div> --}}
-            <div class="mt-4">
-                <x-label for="address" value="{{ __('address') }}" />
-                <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required autocomplete="username" />
-            </div>
+            <div class="mt-4" style="display: flex; align-items: center;">
+                <x-label for="gender" value="{{ __('Select your gender : ') }}" style="margin-right: 10px; font-size: 16px; color: #333;"
+ />
+                <label style="margin-right: 10px;">
+                  <input type="radio" name="gender" value="male" style="margin-right: 5px;">Male
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="female" style="margin-right: 5px;">Female
+                </label>
+              </div>
+
+
+
 
 
             <div class="mt-4">

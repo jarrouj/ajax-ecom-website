@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Product;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -79,4 +80,27 @@ class CategoriesController extends Controller
 
         return response()->json(['success'=>'Product deleted successfully.']);
     }
+    public function cat_page(){
+
+        return view('admin.Categorie');
+    }
+    // public function add_product(Request $request){
+    //     $product = new Product;
+    //     $product->name=$request->name;
+    //     $product->details=$request->details;
+    //     $product->catagory=$request->catagory;
+    //     $product->price=$request->price;
+    //     $product->qty=$request->qty;
+    //     $product->discount_price=$request->discount_price;
+
+    //     // save the image file to storage/app/public/products directory
+    //     // $image_name = $request->file('image')->getClientOriginalName();
+    //     // $request->file('image')->storeAs('public/products', $image_name);
+    //     // $product->image = $image_name;
+
+    //     $product->save();
+
+    //     return redirect()->back();
+    //     }
+
 }

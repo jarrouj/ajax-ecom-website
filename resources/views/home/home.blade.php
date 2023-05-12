@@ -1,7 +1,7 @@
 <section class="home" id="home">
         <div class="home__container container grid">
           <div class="home__img-bg">
-            <img src="assets/img/home.png" alt="" class="home__img" />
+            <img src="assets\img\phone-accessories-bgr.png" alt="" class="home__img" />
           </div>
 
           <div class="home__social">
@@ -24,7 +24,7 @@
 
           <div class="home__data">
             <h1 class="home__title">
-                Discover exceptional products and <br>elevate your shopping experience<br> with us.
+                Accessorize your phone,<br> accessorize your life.
             </h1>
             {{-- <p class="home__description">
               Latest arrival of the new imported watches of the B720 series,

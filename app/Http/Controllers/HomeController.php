@@ -36,7 +36,11 @@ class HomeController extends Controller
         }
         else{
             // $product=product::paginate(6);
-            return view('home.index',compact('product'));
+            // return view('home.index',compact('product'));
+            return view('home.index');
         }
+    }
+    public function index(){
+        return view('home.index');
     }
 }

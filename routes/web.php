@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/',[HomeController::class,'index']);
 
 Route::resource('categories-ajax-crud',CategoriesController::class);
+Route::resource('products-ajax-crud',ProductController::class);
+
 
 Route::middleware([
     'auth:sanctum',
@@ -32,3 +33,6 @@ Route::middleware([
 });
 
 route::get('/redirect',[HomeController::class,'redirect']);
+route::get('cat-page',[CategoriesController::class,'cat_page']);
+route::get('add_product',[CategoriesController::class,'add_product']);
+route::get('view_product',[ProductController::class,'view_product']);
